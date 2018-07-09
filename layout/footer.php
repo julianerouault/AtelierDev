@@ -2,7 +2,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            Copyright © 2013 Ecolidaire
+            Copyright © 2013 Atelier DEV
         </div>
     </footer>
 
