@@ -33,3 +33,25 @@ body {
   color: #253745;
   height: 32px;
 }
+
+.btn-gris {
+  background: #F5F5F5;
+  color: #253745;
+  transition-duration: 0.4s;
+}
+
+.btn-gris:hover {
+  background: #253745;
+  color: white;
+}
+
+.btn-vert {
+  background: #01E59A;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+.btn-vert:hover {
+  background-color: #253745;
+
+}

@@ -5,8 +5,13 @@ require_once 'model/database.php';
 getHeader("Accueil");
 ?>
 
+<div class="container">
+  <div class="row">
+
+<div class="col-md-4">
       <form action="index.php" method="post" class="form-signin">
-        <h1 class="h3 mb-3 font-weight-normal">CONNEXION</h1>
+      </form>
+        <h1 class="h3 mb-3 font-weight-normal" style="color: #253745">CONNEXION</h1>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
         <label for="inputPassword" class="sr-only">Mot de passe</label>
@@ -16,14 +21,13 @@ getHeader("Accueil");
             <input type="checkbox" value="remember-me"> Se souvenir de moi
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">se connecter</button>
+        <button class="btn-lg btn-block btn-vert" type="submit">SE CONNECTER</button>
         </form>
-
-
-
-
-        <form style="float: right;" action="admin/Inscription.php" method="post" class="form-signin">
-          <h1 class="h3 mb-3 font-weight-normal">INSCRIPTION</h1>
+</div>
+<div class="col-md-2"></div>
+<div class="col-md-6">
+        <form action="admin/Inscription.php" method="post" class="form-signin">
+          <h1 class="h3 mb-3 font-weight-normal" style="color: #253745">INSCRIPTION</h1>
           <label for="inputEmail" class="sr-only">Email</label>
           <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
           <label for="inputPassword" class="sr-only">Mot de passe</label>
@@ -40,6 +44,11 @@ getHeader("Accueil");
             <input type="checkbox" value="remember-me"> Se souvenir de moi
         </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">s'inscrire</button>
-</form>
+        <button class=" btn-lg btn-block btn-gris" type="submit">S'INSCRIRE</button>
+      </form>
+</div>
+
+</div>
+</div>
+</div>
 </section>
