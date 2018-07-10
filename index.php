@@ -26,7 +26,7 @@ getHeader("Accueil");
       </div>
 
     <div class="col-lg-6">
-      <form style="background-color: grey;"action="index.php" method="post" class="form-signin">
+      <form style="background-color: grey;"action="admin/Inscription.php" method="post" class="form-signin">
         <h1 class="h3 mb-3 font-weight-normal">INSCRIPTION</h1>
 
         <label for="inputEmail" class="sr-only">Email</label>
@@ -35,7 +35,11 @@ getHeader("Accueil");
         <label for="inputPassword" class="sr-only">Mot de passe</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
 
-        
+        <label for="role">vous êtes ?</label><br />
+               <select name="role" id="role">
+                   <option value="etudiant">Etudiant</option>
+                   <option value="entreprise">Professionnel</option>
+               </select>
 
           <div class="checkbox mb-3">
             <label>
