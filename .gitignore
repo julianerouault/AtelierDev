@@ -5,3 +5,4 @@ admin/node_modules/
 config/parameters.php
 uploads/
 admin/node_modules/
+.DS_Store
