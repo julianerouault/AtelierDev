@@ -5,7 +5,7 @@ require_once 'model/database.php';
 getHeader("Accueil");
 ?>
 
-      <form action="index.php" method="post" class="form-signin">
+      <form action="login.php" method="post" class="form-signin">
         <h1 class="h3 mb-3 font-weight-normal">CONNEXION</h1>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
@@ -19,11 +19,13 @@ getHeader("Accueil");
         <button class="btn btn-lg btn-primary btn-block" type="submit">se connecter</button>
         </form>
 
-
-
-
-        <form style="float: right;" action="admin/Inscription.php" method="post" class="form-signin">
+        <form style="float: right;" action="inscription.php" method="post" class="form-signin">
           <h1 class="h3 mb-3 font-weight-normal">INSCRIPTION</h1>
+          <?php if (isset($_GET["inscription_error"])) : ?>
+            <?php if ($_GET["inscription_error"] == "emailexist") : ?>
+              <p>L'email est déjà utilisé</p>
+            <?php endif; ?>
+          <?php endif; ?>
           <label for="inputEmail" class="sr-only">Email</label>
           <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
           <label for="inputPassword" class="sr-only">Mot de passe</label>
@@ -43,3 +45,5 @@ getHeader("Accueil");
         <button class="btn btn-lg btn-primary btn-block" type="submit">s'inscrire</button>
 </form>
 </section>
+
+<?php getFooter(); ?>

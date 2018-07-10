@@ -34,7 +34,7 @@ try
      }
 
      elseif(!empty($_POST['email']) AND !empty($_POST['password']))
-     {
+{
         $req = $bdd->prepare('INSERT INTO utilisateur (adressemail, mot_de_passe) VALUES (?,?)');
         $req->execute(array($_POST['email'], $_POST['password']));
     ?>
