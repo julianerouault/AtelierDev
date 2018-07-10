@@ -35,21 +35,7 @@ getHeader("Accueil");
         <label for="inputPassword" class="sr-only">Mot de passe</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
 
-        <label for="inputName" class="sr-only">nom</label>
-        <input type="name" name="nom" id="inputName" class="form-control" placeholder="Nom" required autofocus>
-
-        <label for="inputPrenom" class="sr-only">Prénom</label>
-        <input type="prenom" name="prenom" id="inputPrenom" class="form-control" placeholder="Prenom" required autofocus>
-
-        <label for="inputDate" class="sr-only">Date de naissance</label>
-        <input type="date" name="date" id="inputDate" class="form-control" placeholder="Date de naissance" required autofocus>
-
-        <label for="inputPhone" class="sr-only">Numéro de téléphone</label>
-        <input type="phone" name="phone" id="inputPhone" class="form-control" placeholder="Numéro de téléphone" required autofocus>
-
-        <input type="file" name="nom" />
-        <input type="file" name="nom" />
-
+        
 
           <div class="checkbox mb-3">
             <label>
