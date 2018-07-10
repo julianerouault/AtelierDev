@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Login</title>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/signin.css"/>
-    </head>
+<?php require_once 'layout/header.php'; ?>
+
     <body class="text-center">
 
         <form action="index.php" method="post" class="form-signin">

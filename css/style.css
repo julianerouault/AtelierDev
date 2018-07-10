@@ -3,6 +3,11 @@ body {
     font-family: 'Oxygen', sans-serif;
 }
 
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
 .main-nav ul {
   list-style-type: none;
   margin: 0;
@@ -27,9 +32,4 @@ body {
   background-color: #01E59A;
   color: #253745;
   height: 32px;
-}
-
-.container-form {
-  background-color: red;
-  height: 100px;
 }
