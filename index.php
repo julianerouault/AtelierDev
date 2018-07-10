@@ -20,7 +20,7 @@ getHeader("Accueil");
     <button class="btn btn-lg btn-primary btn-block" type="submit">se connecter</button>
 </form>
 
-<form style="float: right;"action="index.php" method="post" class="form-signin">
+<form style="float: right;" action="admin/Inscription.php" method="post" class="form-signin">
     <h1 class="h3 mb-3 font-weight-normal">INSCRIPTION</h1>
     <label for="inputEmail" class="sr-only">Email</label>
     <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
