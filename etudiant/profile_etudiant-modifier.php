@@ -1,14 +1,9 @@
 <?php
-require_once 'lib/functions.php';
-require_once 'model/database.php';
+require_once '../lib/functions.php';
+require_once '../model/database.php';
 
 getHeader("Accueil");
 ?>
-
-
-</head>
-
-<body>
 
    <div class="container">
 <div class="row">
@@ -19,7 +14,7 @@ getHeader("Accueil");
 <!-- Form Name -->
 <legend>Mon Profil</legend>
 
- <button type="button" class="btn btn-outline-danger"><a href="profile_etudiant.php">ANNULER</a></button>   
+ <button type="button" class="btn btn-outline-danger"><a href="index.php">ANNULER</a></button>   
     
     
     
@@ -257,3 +252,4 @@ getHeader("Accueil");
     <script src="js/bootstrap.min.js"></script>
 
 
+<?php getFooter(); ?>
