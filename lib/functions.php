@@ -19,7 +19,7 @@ function debug($var, bool $die = true) {
 
 function currentUser() {
     if (isset($_SESSION["id"])) {
-        return getOneUser($_SESSION["id"]);
+        return getOneUtilisateur($_SESSION["id"]);
     }
     return null;
 }
@@ -33,13 +33,13 @@ function currentPath() {
 }
 
 function getHeader(string $title) {
-    require_once 'layout/header.php';
+    require_once __DIR__ . '/../layout/header.php';
 }
 
 function getFooter() {
-    require_once 'layout/footer.php';
+    require_once __DIR__ . '/../layout/footer.php';
 }
 
 function getMenu() {
-    require_once 'layout/menu.php';
+    require_once __DIR__ . '/../layout/menu.php';
 }

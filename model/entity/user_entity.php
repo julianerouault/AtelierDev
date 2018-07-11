@@ -44,15 +44,34 @@ function getOneUtilisateur(int $id) {
     /* @var $connection PDO */
     global $connection;
 
-    $query = "SELECT *
+    $query = "SELECT
+              utilisateur.*,
+              admin.id AS admin,
+              etudiant.id AS etudiant,
+              entreprise.id AS entreprise
             FROM utilisateur
-            WHERE id = :id;";
+            LEFT JOIN admin ON admin.id = utilisateur.id
+            LEFT JOIN etudiant ON etudiant.id = utilisateur.id
+            LEFT JOIN entreprise ON entreprise.id = utilisateur.id
+            WHERE utilisateur.id = :id;";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":id", $id);
     $stmt->execute();
 
     return $stmt->fetch();
+}
+
+function updateUtilisateur(bool $valide, int $id) {
+  /* @var $connection PDO */
+  global $connection;
+
+  $query = "UPDATE utilisateur SET valide = :valide WHERE id = :id;";
+
+  $stmt = $connection->prepare($query);
+  $stmt->bindParam(":valide", $valide);
+  $stmt->bindParam(":id", $id);
+  $stmt->execute();
 }
 
 function insertUser(string $email, string $password, string $role) {
@@ -70,7 +89,7 @@ function insertUser(string $email, string $password, string $role) {
 
     if ($role == "etudiant") {
         $query = "INSERT INTO etudiant (id) VALUES (:id)";
-    } else if ($role == "entreprise") {
+    } else if ($role == "professionnel") {
         $query = "INSERT INTO entreprise (id) VALUES (:id)";
     }
 

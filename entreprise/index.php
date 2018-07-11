@@ -1,7 +1,11 @@
-entreprise
 <?php
-require_once 'lib/functions.php';
-require_once 'model/database.php';
+require_once '../lib/functions.php';
+require_once '../model/database.php';
+
+$utilisateur = currentUser();
+if(!isset($utilisateur["entreprise"])) {
+  header("Location: ../index.php");
+}
 
 getHeader("Accueil");
 ?>
