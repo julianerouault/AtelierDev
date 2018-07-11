@@ -5,13 +5,6 @@ require_once 'model/database.php';
 getHeader("Accueil");
 ?>
 
-    
-    <!-- Custom CSS -->
-    <style>
-
-    .othertop{margin-top:10px;}
-    </style>
-
 
 </head>
 

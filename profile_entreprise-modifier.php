@@ -5,13 +5,6 @@ require_once 'model/database.php';
 getHeader("Accueil");
 ?>
 
-    
-    <!-- Custom CSS -->
-    <style>
-
-    .othertop{margin-top:10px;}
-    </style>
-
 
 </head>
 
@@ -156,7 +149,7 @@ getHeader("Accueil");
 </form>
 </div>
 <div class="col-md-2 hidden-xs">
-<img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail ">
+<img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail">
     <input type="file" name="imgprofil" />
   </div>
 
