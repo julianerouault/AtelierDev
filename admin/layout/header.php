@@ -1,38 +1,46 @@
-<?php require_once __DIR__ . '/../security.php'; ?>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Admin</title>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/font-awesome/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables/media/css/jquery.dataTables.min.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/select2/dist/css/select2.min.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote-bs4.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/dashboard.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/admin.css"/>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Atelier DEV - <?php echo $title; ?></title>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+     
+    
+<!-- PAGE PROFIL -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/script.js"></script>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
 
-        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<?php echo ADMIN_URL; ?>">Admin</a>
-            <ul class="navbar-nav px-3 flex-row">
-                <li class="nav-item text-nowrap">
-                    <a class="nav-link p-2" href="<?php echo ADMIN_URL; ?>logout.php"><i class="fa fa-sign-out"></i> Sign out</a>
-                </li>
-                <li class="nav-item text-no-wrap">
-                    <a class="nav-link p-2" href="<?php echo SITE_URL; ?>"><i class="fa fa-external-link"></i> Front</a>
-                </li>
-            </ul>
-        </nav>
+    
+    
+</head>
+<body>
 
-        <div class="container-fluid">
-            <div class="row">
-                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                    <div class="sidebar-sticky">
-                        <?php require_once __DIR__ . '/menu.php'; ?>
-                    </div>
-                </nav>
+    <header class="site-header">
+      <nav class="main-nav">
+          <ul>
+              <li><a href="#">Entreprises</a></li>
+              <li><a href="http://wwwW.facebook.com">
+              <span class="fa fa-stack">
+                <i class="fa fa-circle fa-stack-2x" style="color :#01E59A  "></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span></a></li>
+              <li><a href="http://wwwW.twitter.com">
+              <span class="fa fa-stack">
+                <i class="fa fa-circle fa-stack-2x" style="color : #01E59A "></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span></a></li>
+              <li style="float:right"><a href="#">Espace étudiants</a></li>
+          </ul>
+      </nav>
+    </header>
 
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <main>

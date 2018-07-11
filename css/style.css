@@ -31,13 +31,14 @@ body {
 .main-nav li a:hover {
   background-color: #01E59A;
   color: #253745;
-  height: 32px;
+  height: 68px;
 }
 
 .btn-gris {
   background: #F5F5F5;
   color: #253745;
   transition-duration: 0.4s;
+  border: none;
 }
 
 .btn-gris:hover {
@@ -49,6 +50,7 @@ body {
   background: #01E59A;
   color: white;
   transition-duration: 0.4s;
+  border: none;
 }
 
 .btn-vert:hover {

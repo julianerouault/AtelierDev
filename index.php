@@ -28,7 +28,6 @@ getHeader("Accueil");
 <div class="col-md-6">
         <form action="inscription.php" method="post" class="form-signin">
 
-          <h1 class="h3 mb-3 font-weight-normal">INSCRIPTION</h1>
           <?php if (isset($_GET["inscription_error"])) : ?>
             <?php if ($_GET["inscription_error"] == "emailexist") : ?>
               <p>L'email est déjà utilisé</p>
@@ -38,9 +37,9 @@ getHeader("Accueil");
           <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
           <label for="inputPassword" class="sr-only">Mot de passe</label>
           <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
-
+        </br>
           <label for="role">Vous êtes ?</label><br />
-          <select name="role" id="role">
+          <select name="role" class="form-control" id="role">
             <option value="etudiant">Etudiant</option>
             <option value="professionnel">Professionnel</option>
           </select>
