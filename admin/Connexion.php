@@ -15,7 +15,8 @@ try
 
     $sql = "SELECT 1
             FROM utilisateur
-            WHERE adressemail = '$email'";
+            WHERE adressemail = '$email'"
+          
 
     $res = $bdd->query($sql);
     $row = $res->fetch();

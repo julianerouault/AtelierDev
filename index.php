@@ -10,7 +10,7 @@ getHeader("Accueil");
 
 <div class="col-md-4">
       <form action="login.php" method="post" class="form-signin">
-      
+
         <h1 class="h3 mb-3 font-weight-normal" style="color: #253745">CONNEXION</h1>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
@@ -27,7 +27,6 @@ getHeader("Accueil");
 <div class="col-md-2"></div>
 <div class="col-md-6">
         <form action="inscription.php" method="post" class="form-signin">
-          <h1 class="h3 mb-3 font-weight-normal" style="color: #253745">INSCRIPTION</h1>
 
           <h1 class="h3 mb-3 font-weight-normal">INSCRIPTION</h1>
           <?php if (isset($_GET["inscription_error"])) : ?>
