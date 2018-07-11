@@ -2,6 +2,15 @@
 require_once 'lib/functions.php';
 require_once 'model/database.php';
 
+$utilisateur = currentUser();
+if (!is_null($utilisateur["admin"])) {
+  header('Location: admin/index.php');
+} else if (!is_null($utilisateur["entreprise"])) {
+  header('Location: entreprise/index.php');
+} else if (!is_null($utilisateur["etudiant"])) {
+  header('Location: etudiant/index.php');
+}
+
 getHeader("Accueil");
 ?>
 
@@ -12,6 +21,11 @@ getHeader("Accueil");
       <form action="login.php" method="post" class="form-signin">
 
         <h1 class="h3 mb-3 font-weight-normal" style="color: #253745">CONNEXION</h1>
+        <?php if (isset($_GET["login_error"])) : ?>
+          <?php if ($_GET["login_error"] == "notvaliduser") : ?>
+            <p>Votre compte n'a pas encore été validé !</p>
+          <?php endif; ?>
+        <?php endif; ?>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
         <label for="inputPassword" class="sr-only">Mot de passe</label>
@@ -56,7 +70,5 @@ getHeader("Accueil");
 
 </div>
 </div>
-</div>
-</section>
 
 <?php getFooter(); ?>

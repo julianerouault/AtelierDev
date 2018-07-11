@@ -13,6 +13,12 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     $utilisateur = getUtilisateurByEmailPassword($email, $password);
 
     if (isset($utilisateur["id"])) {
+
+        if ($utilisateur["valide"] == 0) {
+          header('Location: index.php?login_error=notvaliduser');
+          die;
+        }
+
         $_SESSION["id"] = $utilisateur["id"];
 
         if (!is_null($utilisateur["admin"])) {
@@ -24,9 +30,3 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         }
     }
 }
-
-/*
-if (isset($_SESSION["id"])) {
-    $utilisateur = getOneUtilisateur($_SESSION["id"]);
-}
-*/

@@ -6,4 +6,3 @@ define("DB_USER", "root");
 define("DB_PASS", "root");
 
 define("SITE_URL", "http://localhost:8888/DC3/AtelierDev/");
-define("ADMIN_URL", SITE_URL . "admin/");

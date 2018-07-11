@@ -1,11 +1,12 @@
+<?php $utilisateur = currentUser(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Atelier DEV - <?php echo $title; ?></title>
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>css/style.css">
 
 
 <!-- PAGE PROFIL -->
@@ -35,7 +36,9 @@
                 <i class="fa fa-circle fa-stack-2x" style="color : #01E59A "></i>
                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
               </span></a></li>
-              <li style="float:right"><a href="#">Espace étudiants</a></li>
+              <?php if(isset($utilisateur["id"])) : ?>
+              <li style="float:right"><a href="<?php echo SITE_URL; ?>logout.php">Déconnexion</a></li>
+            <?php endif; ?>
           </ul>
       </nav>
     </header>
