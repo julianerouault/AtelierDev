@@ -62,6 +62,18 @@ function getOneUtilisateur(int $id) {
     return $stmt->fetch();
 }
 
+function updateUtilisateur(bool $valide, int $id) {
+  /* @var $connection PDO */
+  global $connection;
+
+  $query = "UPDATE utilisateur SET valide = :valide WHERE id = :id;";
+
+  $stmt = $connection->prepare($query);
+  $stmt->bindParam(":valide", $valide);
+  $stmt->bindParam(":id", $id);
+  $stmt->execute();
+}
+
 function insertUser(string $email, string $password, string $role) {
     /* @var $connection PDO */
     global $connection;
