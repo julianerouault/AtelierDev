@@ -10,260 +10,104 @@ if(!isset($utilisateur["entreprise"])) {
 getHeader("Accueil");
 ?>
 
+<div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-lg-offset-2 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Nom de l'entreprise</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail" class="img-circle img-responsive"> 
+                  </div>
+                
 
-    <!-- Custom CSS -->
-    <style>
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                    
+                         <tr>
+                        <td>Adresse Email</td>
+                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        </tr>
+                        
+                        <tr>
+                        <td>Numéro de téléphone</td>
+                        <td>02 00 00 00 00 (Fixe)</td>
+                        </tr>
+                        
+                        <tr>
+                        <td>Spécialisation</td>
+                        <td>Marketing</td>
+                      </tr>
+                        
+                        <tr>
+                        <td>Numéro de SIRET</td>
+                        <td>362 521 879 00034</td>
+                      </tr>
+                        
+                    
+                     
+                     
+                  
+                     
+                    </tbody>
+                  </table>
+                  
+                  <a href="profile_entreprise-modifier.php" class="btn btn-primary">Modifier mon profil</a>
+                <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('id01').style.display='block'">Modifier mon mot de passe</button>
+                 
+                    
+                    <!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
 
-    .othertop{margin-top:10px;}
-    </style>
-
-
-</head>
-
-<body>
-
-   <div class="container">
-<div class="row">
-<div class="col-md-10 ">
-<form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-<legend>Mon Profil</legend>
-
-
-
-
-
-<!-- NOM PRENOM-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Nom">Nom</label>
-  <div class="col-md-4">
- <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
-       <input id="Nom" name="Nom" type="text" placeholder="Nom" class="form-control input-md">
-      </div>
-
-
-  </div>
-
-
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Prénom">Prénom</label>
-  <div class="col-md-4">
- <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
-       <input id="Prénom" name="Prénom" type="text" placeholder="Prénom" class="form-control input-md">
-      </div>
-
-
-  </div>
-
-
-</div>
-
-
-<!-- Date de Naissance -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Naissance">Date de naissance</label>
-  <div class="col-md-4">
-
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-birthday-cake"></i>
-
-       </div>
-       <input id="Naissance" name="Naissance" type="text" placeholder="Date de naissance" class="form-control input-md">
-      </div>
-
-
-  </div>
-</div>
-
-
-    <!-- Numéro de tel -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Téléphone">Numéro de téléphone </label>
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-phone"></i>
-
-       </div>
-    <input id="Téléphone" name="Téléphone" type="text" placeholder="Numéro de fixe" class="form-control input-md">
-
-      </div>
-      <div class="input-group othertop">
-       <div class="input-group-addon">
-     <i class="fa fa-mobile fa-1x" style="font-size: 20px;"></i>
-
-       </div>
-    <input id="Mobile Téléphone" name="Mobile Téléphone" type="text" placeholder="Numéro de mobile" class="form-control input-md">
-
-      </div>
-
-  </div>
-</div>
-
-
-
-<!-- Adresse mail-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Email">Adresse Email</label>
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-envelope-o"></i>
-
-       </div>
-    <input id="Email" name="Email" type="text" placeholder="Adresse Email" class="form-control input-md">
-
-      </div>
-
-  </div>
-</div>
-
-
-    <hr>
-
-
-
-<!--Niveau d'étude-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="niveau étude">Niveau d'étude actuel</label>
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-briefcase"></i>
-
-       </div>
-      <input id="niveau étude" name="niveau étude" type="text" placeholder="Niveau d'étude actuel" class="form-control input-md">
-      </div>
-
-
-  </div>
-</div>
-
-
-<!-- Multiple Checkboxes -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Spécialisation">Spécialisations</label>
-  <div class="col-md-4">
-  <div class="checkbox">
-    <label for="Spécialisation-0">
-      <input type="checkbox" name="Spécialisation" id="Spécialisation-0" value="1">
-      Marketing
-    </label>
-    </div>
-  <div class="checkbox">
-    <label for="Spécialisation-1">
-      <input type="checkbox" name="Spécialisation" id="Spécialisation-1" value="2">
-      Développement
-    </label>
-    </div>
-  <div class="checkbox">
-    <label for="Spécialisation-2">
-      <input type="checkbox" name="Spécialisation" id="Spécialisation-2" value="3">
-      WebDesign
-    </label>
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail " alt="Avatar" class="avatar">
     </div>
 
-<div class="othertop">
-    <label for="Spécialisation-4">
+    <div class="container">
+      <label for="psw"><b>Nouveau mot de passe</b></label>
+      <input type="password" placeholder="Nouveau mot de passe" name="psw" required>
 
+      <label for="psw"><b>Confirmer le nouveau mot de passe</b></label>
+      <input type="password" placeholder="Confirmer le nouveau mot de passe" name="psw" required>
 
-
-    </label>
-
-     <input type="input" name="Spécialisation" id="Spécialisation-4"  placeholder="Autre spécialisations">
+      <button class="btn btn-success" type="submit">Modifier mon mot de passe</button>
     </div>
 
-  </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
 </div>
-
-
-<!--CV-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="CV">Télécharger mon CV</label>
-  <div class="col-md-4">
-  <div class="input-group">
-      <input type="file" name="CV" />
+                    
+                </div>
+              </div>
+            </div>
+                 
+          </div>
+        </div>
       </div>
+    </div>
 
 
-  </div>
-</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
-
-<!--Lettre de Motivation-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="diplome">Télécharger mes diplômes</label>
-  <div class="col-md-4">
-  <div class="input-group">
-      <input type="file" name="diplome" />
-      </div>
-
-
-  </div>
-</div>
-
-
-
-
-<!--Lettre de Motivation-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="lettre de motivation">Télécharger ma lettre de motivation</label>
-  <div class="col-md-4">
-  <div class="input-group">
-      <input type="file" name="lettre de motivation" />
-      </div>
-
-
-  </div>
-</div>
-
-
-
-
-<!-- Description -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Description">Description</label>
-  <div class="col-md-4">
-    <textarea class="form-control" rows="10"  id="Description" name="Description"></textarea>
-  </div>
-</div>
-
-
-<div class="form-group">
-  <label class="col-md-4 control-label" ></label>
-  <div class="col-md-4">
-  <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Enregistrer</a>
-
-  </div>
-</div>
-
-</fieldset>
-</form>
-</div>
-<div class="col-md-2 hidden-xs">
-<img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail ">
-    <input type="file" name="imgprofil" />
-  </div>
-
-
-</div>
-   </div>
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<?php getFooter(); ?>
