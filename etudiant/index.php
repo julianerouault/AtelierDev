@@ -2,8 +2,10 @@
 require_once '../lib/functions.php';
 require_once '../model/database.php';
 
-$utilisateur = currentUser();
-if(!isset($utilisateur["etudiant"])) {
+$user = currentUser();
+$etudiant = getOneEtudiant($user["id"]);
+
+if(!isset($user["etudiant"])) {
   header("Location: ../index.php");
 }
 
@@ -30,7 +32,7 @@ window.onclick = function(event) {
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Nom Prénom</h3>
+              <h3 class="panel-title"><?php echo $etudiant["nom"] ?></h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -56,12 +58,12 @@ window.onclick = function(event) {
                     <tbody>
                       <tr>
                         <td>Date de Naissance</td>
-                        <td>01/24/1988</td>
+                        <td><?php echo $etudiant["date_naissance"] ?></td>
                       </tr>
 
                           <tr>
                         <td>Numéro de téléphone</td>
-                        <td>02 00 00 00 00 (Fixe)<br>06 00 00 00 00 (Mobile)
+                        <td><?php echo $etudiant["telephone"] ?>
                         </td>
                         </tr>
 
@@ -72,7 +74,7 @@ window.onclick = function(event) {
 
                         <tr>
                         <td>Niveau d'étude</td>
-                        <td>BAC +3 "Chef de Projet Web"</td>
+                        <td>BAC +<?php echo $etudiant["niveau"] ?></td>
                       </tr>
 
                     <tr>

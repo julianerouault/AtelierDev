@@ -2,8 +2,10 @@
 require_once '../lib/functions.php';
 require_once '../model/database.php';
 
-$utilisateur = currentUser();
-if(!isset($utilisateur["entreprise"])) {
+$user = currentUser();
+$entreprise = getOneEntreprise($user["id"]);
+
+if(!isset($user["entreprise"])) {
   header("Location: ../index.php");
 }
 
@@ -13,57 +15,57 @@ getHeader("Accueil");
 <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 col-lg-offset-2 toppad" >
-   
-   
+
+
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Nom de l'entreprise</h3>
+              <h3 class="panel-title"><?php echo $entreprise["nom"] ?></h3>
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail" class="img-circle img-responsive"> 
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail" class="img-circle img-responsive">
                   </div>
-                
 
-                <div class=" col-md-9 col-lg-9 "> 
+
+                <div class=" col-md-9 col-lg-9 ">
                   <table class="table table-user-information">
                     <tbody>
-                    
+
                          <tr>
                         <td>Adresse Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        <td><a href="mailto:info@support.com"><?php echo $entreprise["email"] ?></a></td>
                         </tr>
-                        
+
                         <tr>
                         <td>Numéro de téléphone</td>
-                        <td>02 00 00 00 00 (Fixe)</td>
+                        <td><?php echo $entreprise["telephone"] ?><</td>
                         </tr>
-                        
+
                         <tr>
                         <td>Spécialisation</td>
                         <td>Marketing</td>
                       </tr>
-                        
+
                         <tr>
                         <td>Numéro de SIRET</td>
                         <td>362 521 879 00034</td>
                       </tr>
-                        
-                    
-                     
-                     
-                  
-                     
+
+
+
+
+
+
                     </tbody>
                   </table>
-                  
+
                   <a href="profile_entreprise-modifier.php" class="btn btn-primary">Modifier mon profil</a>
                 <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('id01').style.display='block'">Modifier mon mot de passe</button>
-                 
-                    
+
+
                     <!-- The Modal -->
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" 
+  <span onclick="document.getElementById('id01').style.display='none'"
 class="close" title="Close Modal">&times;</span>
 
   <!-- Modal Content -->
@@ -87,11 +89,11 @@ class="close" title="Close Modal">&times;</span>
     </div>
   </form>
 </div>
-                    
+
                 </div>
               </div>
             </div>
-                 
+
           </div>
         </div>
       </div>

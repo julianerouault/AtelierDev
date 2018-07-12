@@ -1,4 +1,7 @@
-<?php $utilisateur = currentUser(); ?>
+<?php
+require_once __DIR__ . '/../config/parameters.php';
+$utilisateur = currentUser();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
