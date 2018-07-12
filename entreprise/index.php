@@ -100,6 +100,20 @@ class="close" title="Close Modal">&times;</span>
     </div>
 
 
+    <h1>Liste des utilisateurs</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th><?php echo $utilisateur["adressemail"] ?></th>
+          <th><?php echo $utilisateur["date_inscription"] ?></th>
+          <th><?php echo $utilisateur["id"] ?></th>
+        </tr>
+      </thead>
+    
+    </table>
+
+
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
